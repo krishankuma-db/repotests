@@ -1,2 +1,2 @@
 def myfunc():
-    print("Current Value")
+    print("New Value")
