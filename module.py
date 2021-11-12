@@ -1,2 +1,2 @@
 def myfunc():
-    print("Newerest Value")
+    print("CLI")
