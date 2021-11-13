@@ -20,7 +20,7 @@ jobs:
     - name: Executes repo sync
       uses: bkvarda/databricks-cli-github-action@main
       with:
-        command: 'ls -la'
+        command: 'databricks repos list'
       env:
         DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
         DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
