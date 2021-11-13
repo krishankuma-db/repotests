@@ -17,10 +17,19 @@ jobs:
   build-and-deploy: 
     runs-on: ubuntu-latest
     steps:
-    - name: Executes repo sync
-      uses: bkvarda/databricks-cli-github-action@main
-      with:
-        command: 'databricks repos list --debug'
+    - name: Build image
+      id: docker_build
+      uses: docker/build-push-action@v2
+      with: 
+        push: false
+        secrets: |
+          "DATABRICKS_HOST=${{ secrets.DATABRICKS_HOST }}"
+          "DATABRICKS_TOKEN=${{ secrets.DATABRICKS_TOKEN }}"
       env:
         DATABRICKS_HOST: ${{ secrets.DATABRICKS_HOST }}
         DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+    - name: Executes repo sync
+      id: databricks_repo_sync
+      uses: bkvarda/databricks-cli-github-action@main
+      with:
+        command: 'databricks repos list --debug'
