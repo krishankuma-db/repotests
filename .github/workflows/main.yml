@@ -16,7 +16,6 @@ on:
 jobs:
   build-and-deploy: 
     runs-on: ubuntu-latest
-    environment: 'Main env'
     steps:
       - 
         name: Executes repo sync
