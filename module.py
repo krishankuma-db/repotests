@@ -1,2 +1,2 @@
 def myfunc():
-    print("triggeredautomaticaly")
+    print("triggeredautomaticalyagain")
