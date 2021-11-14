@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
   
 jobs:
-  build-and-deploy: 
+  sync-databricks-repo: 
     runs-on: ubuntu-latest
     steps:
       - 
@@ -24,4 +24,4 @@ jobs:
         with:
           databricks-host: ${{ secrets.DATABRICKS_HOST }}
           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
-          command: 'databricks repos list --debug'
+          command: 'databricks repos update --repo-id 4122552516343800 --branch main'
