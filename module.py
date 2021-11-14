@@ -1,2 +1,2 @@
 def myfunc():
-    print("CLI")
+    print("triggeredautomaticaly")

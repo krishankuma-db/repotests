@@ -25,3 +25,11 @@ jobs:
           databricks-host: ${{ secrets.DATABRICKS_HOST }}
           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
           command: 'databricks repos update --repo-id 4122552516343800 --branch main'
+      - 
+        name: Runs pre-defined job after repo sync
+        id: databricks_repo_sync
+        uses: bkvarda/databricks-cli-github-action@main
+        with:
+          databricks-host: ${{ secrets.DATABRICKS_HOST }}
+          databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
+          command: 'databricks jobs run-now --job-id 25
