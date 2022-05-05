@@ -1,2 +1,2 @@
 def myfunc():
-    print("updated module new update again. ap")
+    print("updated module new update again. foobar")
