@@ -24,7 +24,7 @@ jobs:
         with:
           databricks-host: ${{ secrets.DATABRICKS_HOST }}
           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
-          command: 'databricks repos update --repo-id 4496567745915641 --branch main'
+          command: 'databricks repos update --repo-id 2801784709523600 --branch main'
       - 
         name: Runs pre-defined job after repo sync
         id: databricks_run_job
@@ -32,4 +32,4 @@ jobs:
         with:
           databricks-host: ${{ secrets.DATABRICKS_HOST }}
           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
-          command: 'databricks jobs run-now --job-id 19'
+          command: 'databricks jobs run-now --job-id 63463075560100'
