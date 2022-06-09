@@ -32,4 +32,4 @@ jobs:
         with:
           databricks-host: ${{ secrets.DATABRICKS_HOST }}
           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
-          command: 'databricks jobs run-now --job-id 587408721066184'
+          command: 'databricks jobs run-now --job-id 803604509785406'
