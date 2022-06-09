@@ -20,7 +20,7 @@ jobs:
       - 
         name: Executes repo sync
         id: databricks_repo_sync
-        uses: bkvarda/databricks-cli-github-action@main
+        uses: krishankuma-db/databricks-cli-github-action@main
         with:
           databricks-host: ${{ secrets.DATABRICKS_HOST }}
           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
@@ -28,7 +28,7 @@ jobs:
       - 
         name: Runs pre-defined job after repo sync
         id: databricks_run_job
-        uses: bkvarda/databricks-cli-github-action@main
+        uses: krishankuma-db/databricks-cli-github-action@main
         with:
           databricks-host: ${{ secrets.DATABRICKS_HOST }}
           databricks-token: ${{ secrets.DATABRICKS_TOKEN }}
